@@ -23,15 +23,14 @@ console.log ( discountUnderAge);
 let discountOverAge = parseFloat (ticketPrice * 0.4); 
 console.log ( discountOverAge) 
 
-let price;
+let priceDiscount;
 
 if (ageUser < 18 ){
-    price = (ticketPrice - discountUnderAge)
-    document.getElementById('output') .innerHTML = 'il costo del biglietto è' +  price 
+    priceDiscount = (ticketPrice - discountUnderAge)
+    document.getElementById('output') .innerHTML = 'Il costo del biglietto è' + ' ' + priceDiscount.toFixed(2) + '&euro;'
 } else if ( ageUser > 65 ) {
-    price = (ticketPrice - discountOverAge )
-    document.getElementById('output') .innerHTML = 'il costo del biglietto è' + price
+    priceDiscount = (ticketPrice - discountOverAge )
+    document.getElementById('output') .innerHTML = 'Il costo del biglietto è' + ' ' + priceDiscount.toFixed(2) + '&euro;'
 } else {
-    document.getElementById('output') .innerHTML = 'il costo del biglietto è' + ticketPrice 
+    document.getElementById('output') .innerHTML = 'Il costo del biglietto è' + ' ' + ticketPrice.toFixed(2) + '&euro;'
 }
-console.log ( price)
